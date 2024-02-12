@@ -9,6 +9,7 @@ const RoutesContainer = () => {
   const OtpPage = lazy(() => import('@/pages/Auth/Otp'));
   const NotFoundPage = lazy(() => import('@/pages/NotFound'));
   const HomePage = lazy(() => import("@/pages/Home"));
+  const CategoryPage = lazy(()=> import('@/pages/Category'))
 
   return (
     <Suspense fallback={ <>Loading...</> }>
@@ -21,6 +22,7 @@ const RoutesContainer = () => {
           <Route path="/reset-password" element={ <ChangePasswordPage /> } />
           <Route path="/" element={ <HomePage /> } />
           <Route path="*" element={ <NotFoundPage /> } />
+          <Route path="/category" element={<CategoryPage/>} />
         </Routes>
       </Router>
     </Suspense>
