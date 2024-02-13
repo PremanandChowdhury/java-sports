@@ -10,6 +10,16 @@ const RoutesContainer = () => {
   const NotFoundPage = lazy(() => import('@/pages/NotFound'));
   const HomePage = lazy(() => import("@/pages/Home"));
   const CategoryPage = lazy(()=> import('@/pages/Category'))
+  const CategoryBatsPage = lazy(()=> import('@/pages/Category/Bats'))
+  const CategoryApprealPage = lazy(()=> import('@/pages/Category/Appreal'))
+  const CategoryBallsPage = lazy(()=> import('@/pages/Category/Balls'))
+  const CategoryKitsPage = lazy(()=> import('@/pages/Category/Kits'))
+  const CategoryShoessPage = lazy(()=> import('@/pages/Category/Shoes'))
+
+
+
+
+
 
   return (
     <Suspense fallback={ <>Loading...</> }>
@@ -23,6 +33,11 @@ const RoutesContainer = () => {
           <Route path="/" element={ <HomePage /> } />
           <Route path="*" element={ <NotFoundPage /> } />
           <Route path="/category" element={<CategoryPage/>} />
+          <Route path="/bats-category" element={<CategoryBatsPage/>}/>
+          <Route path="/appreal-category" element={<CategoryApprealPage/>} />
+          <Route path="/Balls-category" element={<CategoryBallsPage/>} />
+          <Route path="/Kits-category" element={<CategoryKitsPage/>} />
+          <Route path="/shoes-category" element={<CategoryKitsPage/>} />
         </Routes>
       </Router>
     </Suspense>

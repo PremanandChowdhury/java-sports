@@ -7,9 +7,7 @@ import right from '@assets/icons/right.svg'
 import left from '@assets/icons/left.svg'
 import { useState } from 'react'
 
-
-
-const index = () => {
+const Kits = () => {
     const [MenuToggle, setMenuToggle] = useState(false)
     return (
         <>
@@ -17,19 +15,19 @@ const index = () => {
             <div className='bg-white justify-center relative'>
                 <div className=' p-3 bg-grey/1'>
                     <div className=''>
-                        <span className=' pl-[140px] max-lg:pl-9 font-Lato text-[16px] font-700 align-middle'>Home {`>>`} Accessories {`>>`} <span className='text-red-500'>All</span></span>
+                        <span className=' pl-[140px] max-lg:pl-9 font-Lato text-[16px] font-700 align-middle'>Home {`>>`} Kits {`>>`} <span className='text-red-500'>All</span></span>
                     </div>
                 </div>
                 <div className='p-5 pl-[140px] flex justify-between max-lg:pr-10 max-lg:pl-10 pr-[158px]'>
                     <div className='flex '>
                         <span className='text-[16px] font-Lato font-700 p-2'>Fillter</span>
-                        <button onClick={() => setMenuToggle((prev) => !prev)} > <img src={tune} alt=""/></button>
+                        <button onClick={() => setMenuToggle((prev) => !prev)} > <img src={tune} alt="" /></button>
                     </div>
                     {MenuToggle && (
                         <div className='bg-white  absolute left-[-400px] top-[100px] border-2 xl:hidden p-5 duration-1500 translate-x-[400px]'>
-                            <div className='flex flex-col'>
+                              <div className='flex flex-col'>
                                 <div className='flex'>
-                                    <span className=' pl-2 text-xl font-Lato font-700'>Accessory Type:</span>
+                                    <span className=' pl-2 text-xl font-Lato font-700'>Bag Type:</span>
                                 </div>
                                 <ul class="w-48 text-sm font-medium text-gray-900 bg-white">
                                     <li class="w-full">
@@ -41,37 +39,26 @@ const index = () => {
                                     <li class="w-full">
                                         <div class="flex items-center ps-3">
                                             <input id="Grip-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="Grip-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Grip</label>
+                                            <label for="Grip-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Backpacks</label>
                                         </div>
                                     </li>
                                     <li class="w-full">
                                         <div class="flex items-center ps-3">
                                             <input id="Stickers-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="Stickers-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Stickers</label>
+                                            <label for="Stickers-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Duffel Bags</label>
                                         </div>
                                     </li>
                                     <li class="w-full">
                                         <div class="flex items-center ps-3">
-                                            <input id="balls-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="balls-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Cricket Balls</label>
+                                            <input id="Stickers-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
+                                            <label for="Stickers-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Wheelie Bags</label>
                                         </div>
                                     </li>
-                                    <li class="w-full">
-                                        <div class="flex items-center ps-3">
-                                            <input id="bats-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="bats-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Bat Covers</label>
-                                        </div>
-                                    </li>
-                                    <li class="w-full">
-                                        <div class="flex items-center ps-3">
-                                            <input id="Wrist-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="Wrist-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Wrist Bands</label>
-                                        </div>
-                                    </li>
+                        
                                 </ul>
 
                                 <div className='flex'>
-                                    <span className='pl-2 text-xl font-Lato font-700'>Color:</span>
+                                    <span className='pl-2 text-xl font-Lato font-700'>Size:</span>
                                 </div>
                                 <ul class="w-48 text-sm font-medium text-gray-900 bg-white">
                                     <li class="w-full">
@@ -83,29 +70,54 @@ const index = () => {
                                     <li class="w-full">
                                         <div class="flex items-center ps-3">
                                             <input id="Blue-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="Blue-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Blue</label>
+                                            <label for="Blue-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Small</label>
                                         </div>
                                     </li>
                                     <li class="w-full">
                                         <div class="flex items-center ps-3">
                                             <input id="Green-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="Green-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Green</label>
+                                            <label for="Green-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Medium</label>
                                         </div>
                                     </li>
                                     <li class="w-full">
                                         <div class="flex items-center ps-3">
                                             <input id="White-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="White-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">White</label>
+                                            <label for="White-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Large</label>
                                         </div>
                                     </li>
-                                    <li class="w-full">
-                                        <div className="flex items-center ps-3">
-                                            <input id="Black-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="Black-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Black</label>
-                                        </div>
-                                    </li>
+                                  
                                 </ul>
                             </div>
+
+                            <div className='flex'>
+                                <span className='pl-2 text-xl font-Lato font-700'>Color:</span>
+                            </div>
+                            <ul class="w-48 text-sm font-medium text-gray-900 bg-white">
+                                <li class="w-full">
+                                    <div class="flex items-center ps-3">
+                                        <input id="Allc-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
+                                        <label for="Allc-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Blue</label>
+                                    </div>
+                                </li>
+                                <li class="w-full">
+                                    <div class="flex items-center ps-3">
+                                        <input id="Blue-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
+                                        <label for="Blue-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Green</label>
+                                    </div>
+                                </li>
+                                <li class="w-full">
+                                    <div class="flex items-center ps-3">
+                                        <input id="Green-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
+                                        <label for="Green-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">White</label>
+                                    </div>
+                                </li>
+                                <li class="w-full">
+                                    <div class="flex items-center ps-3">
+                                        <input id="Green-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
+                                        <label for="Green-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Black</label>
+                                    </div>
+                                </li>
+                            </ul>
 
                             <div className='flex'>
                                 <span className='pl-2 text-xl font-Lato font-700'>Price Range:</span>
@@ -170,6 +182,7 @@ const index = () => {
                                 <button className='text-white font-Lato font-800 bg-black p-2 rounded-md'>Reset All</button>
                             </div>
                         </div>
+
                     )}
                     <div className='flex gap-1'>
                         <img className='max-lg:rotate-90' src={sort} alt="" />
@@ -190,7 +203,7 @@ const index = () => {
                         <div className='font-Lato w-[220px] border-2 p-4'>
                             <div className='flex flex-col'>
                                 <div className='flex'>
-                                    <span className=' pl-2 text-xl font-Lato font-700'>Accessory Type:</span>
+                                    <span className=' pl-2 text-xl font-Lato font-700'>Bag Type:</span>
                                 </div>
                                 <ul class="w-48 text-sm font-medium text-gray-900 bg-white">
                                     <li class="w-full">
@@ -202,37 +215,25 @@ const index = () => {
                                     <li class="w-full">
                                         <div class="flex items-center ps-3">
                                             <input id="Grip-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="Grip-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Grip</label>
+                                            <label for="Grip-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Backpacks</label>
                                         </div>
                                     </li>
                                     <li class="w-full">
                                         <div class="flex items-center ps-3">
                                             <input id="Stickers-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="Stickers-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Stickers</label>
+                                            <label for="Stickers-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Duffel Bags</label>
                                         </div>
                                     </li>
                                     <li class="w-full">
                                         <div class="flex items-center ps-3">
-                                            <input id="balls-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="balls-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Cricket Balls</label>
-                                        </div>
-                                    </li>
-                                    <li class="w-full">
-                                        <div class="flex items-center ps-3">
-                                            <input id="bats-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="bats-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Bat Covers</label>
-                                        </div>
-                                    </li>
-                                    <li class="w-full">
-                                        <div class="flex items-center ps-3">
-                                            <input id="Wrist-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="Wrist-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Wrist Bands</label>
+                                            <input id="Stickers-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
+                                            <label for="Stickers-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Wheelie Bags</label>
                                         </div>
                                     </li>
                                 </ul>
 
                                 <div className='flex'>
-                                    <span className='pl-2 text-xl font-Lato font-700'>Color:</span>
+                                    <span className='pl-2 text-xl font-Lato font-700'>Size:</span>
                                 </div>
                                 <ul class="w-48 text-sm font-medium text-gray-900 bg-white">
                                     <li class="w-full">
@@ -244,29 +245,53 @@ const index = () => {
                                     <li class="w-full">
                                         <div class="flex items-center ps-3">
                                             <input id="Blue-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="Blue-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Blue</label>
+                                            <label for="Blue-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Small</label>
                                         </div>
                                     </li>
                                     <li class="w-full">
                                         <div class="flex items-center ps-3">
                                             <input id="Green-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="Green-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Green</label>
+                                            <label for="Green-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Medium</label>
                                         </div>
                                     </li>
                                     <li class="w-full">
                                         <div class="flex items-center ps-3">
                                             <input id="White-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="White-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">White</label>
-                                        </div>
-                                    </li>
-                                    <li class="w-full">
-                                        <div className="flex items-center ps-3">
-                                            <input id="Black-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
-                                            <label for="Black-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Black</label>
+                                            <label for="White-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Large</label>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
+
+                            <div className='flex'>
+                                <span className='pl-2 text-xl font-Lato font-700'>Color:</span>
+                            </div>
+                            <ul class="w-48 text-sm font-medium text-gray-900 bg-white">
+                                <li class="w-full">
+                                    <div class="flex items-center ps-3">
+                                        <input id="Allc-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
+                                        <label for="Allc-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Blue</label>
+                                    </div>
+                                </li>
+                                <li class="w-full">
+                                    <div class="flex items-center ps-3">
+                                        <input id="Blue-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
+                                        <label for="Blue-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Green</label>
+                                    </div>
+                                </li>
+                                <li class="w-full">
+                                    <div class="flex items-center ps-3">
+                                        <input id="Green-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
+                                        <label for="Green-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">White</label>
+                                    </div>
+                                </li>
+                                <li class="w-full">
+                                    <div class="flex items-center ps-3">
+                                        <input id="Green-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-900 border-gray-900 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-1 " />
+                                        <label for="Green-checkbox" class="w-full py-2 ms-1 text-xs font-Lato font-700">Black</label>
+                                    </div>
+                                </li>
+                            </ul>
 
                             <div className='flex'>
                                 <span className='pl-2 text-xl font-Lato font-700'>Price Range:</span>
@@ -332,6 +357,8 @@ const index = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* App Card wrapper */}
                     <div className='bg-white grid grid-cols-4 gap-5 max-lg:grid-cols-2'>
                         {/* <AppCard/>
                     <AppCard/>
@@ -340,6 +367,8 @@ const index = () => {
                     <AppCard/> */}
                     </div>
                 </div>
+
+                {/* Pagnation */}
                 <div className='flex bg-white gap-1 p-5 justify-end pr-[10%]'>
                     <button className='border-2 rounded py-1 px-4 m-1'>
                         <img src={left} alt="right" />
@@ -356,5 +385,5 @@ const index = () => {
         </>
     )
 }
-export default index 
 
+export default Kits
