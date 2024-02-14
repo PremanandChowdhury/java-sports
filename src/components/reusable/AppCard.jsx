@@ -11,8 +11,8 @@ import wishlistIcon from '@assets/icons/wishlist-filled.svg'
  */
 
 const AppCard = (props) => {
-  const cardWrapper = `w-[300px] h-[400px] rounded-[20px] bg-neutral-white px-[22px] pt-[12px] pb-[20px] border my-[20px]`;
-  const imageWrapper = `bg-grey/1 w-[250px] h-[250px] rounded-[20px] my-4 flex justify-center items-center`
+  const cardWrapper = `w-[250px] h-[300px] rounded-[20px] bg-neutral-white px-[22px] pt-[12px] pb-[20px] border my-[20px]`;
+  const imageWrapper = `bg-grey/1 w-[200px] h-[200px] rounded-[20px] my-4 flex justify-center items-center`
 
   return (
     <article className={ `${cardWrapper} card-shadow` }>

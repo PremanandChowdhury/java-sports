@@ -6,10 +6,137 @@ import sort from '@/assets/icons/sort.svg'
 import right from '@assets/icons/right.svg'
 import left from '@assets/icons/left.svg'
 import { useState } from 'react'
+import AppProductSlider from '@/components/reusable/AppProductSlider'
+// @ts-ignore
+import pImg1 from '@/assets/images/prostrike-elite-bat.svg'
+// @ts-ignore
+import pImg2 from '@/assets/images/prostrike-elite-bat-2.svg'
+// @ts-ignore
+import pImg3 from '@/assets/images/prostrike-elite-bat-3.svg'
+// @ts-ignore
+import accImg1 from '@/assets/images/wicket.svg'
+// @ts-ignore
+import accImg2 from '@/assets/images/hammer.svg'
+// @ts-ignore
+import accImg3 from '@/assets/images/gloves.svg'
+// @ts-ignore
+import accImg4 from '@/assets/images/leg-protection.svg'
+// @ts-ignore
+import accImg5 from '@/assets/images/thigh-protection.svg'
 
+import AppCard from "@components/reusable/AppCard"
 
 
 const index = () => {
+    const Product = [
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '400',
+            discounted: '500',
+            image: pImg1
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '400',
+            discounted: '500',
+            image: pImg1
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '400',
+            discounted: '500',
+            image: pImg1
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '400',
+            discounted: '500',
+            image: pImg3
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '400',
+            discounted: '500',
+            image: pImg2
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '400',
+            discounted: '500',
+            image: pImg1
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '400',
+            discounted: '500',
+            image: pImg2
+        },
+    ]
+
+    // Accessories 
+    const Accessories = [
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '400',
+            discounted: '500',
+            image: accImg1
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '825',
+            discounted: '900',
+            image: accImg2
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '700',
+            discounted: '800',
+            image: accImg3
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '400',
+            discounted: '1200',
+            image: accImg4
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '400',
+            discounted: '1200',
+            image: accImg5
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '400',
+            discounted: '500',
+            image: accImg1
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '825',
+            discounted: '900',
+            image: accImg2
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '700',
+            discounted: '800',
+            image: accImg3
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '400',
+            discounted: '1200',
+            image: accImg4
+        },
+        {
+            title: 'ProStrike Elite Cricket Bat',
+            price: '400',
+            discounted: '1200',
+            image: accImg5
+        },
+    ]
+
     const [MenuToggle, setMenuToggle] = useState(false)
     return (
         <>
@@ -23,7 +150,7 @@ const index = () => {
                 <div className='p-5 pl-[140px] flex justify-between max-lg:pr-10 max-lg:pl-10 pr-[158px]'>
                     <div className='flex '>
                         <span className='text-[16px] font-Lato font-700 p-2'>Fillter</span>
-                        <button onClick={() => setMenuToggle((prev) => !prev)} > <img src={tune} alt=""/></button>
+                        <button onClick={() => setMenuToggle((prev) => !prev)} > <img src={tune} alt="" /></button>
                     </div>
                     {MenuToggle && (
                         <div className='bg-white  absolute left-[-400px] top-[100px] border-2 xl:hidden p-5 duration-1500 translate-x-[400px]'>
@@ -332,12 +459,18 @@ const index = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='bg-white grid grid-cols-4 gap-5 max-lg:grid-cols-2'>
-                        {/* <AppCard/>
-                    <AppCard/>
-                    <AppCard/>
-                    <AppCard/>
-                    <AppCard/> */}
+                    <div className='bg-white grid grid-cols-4 max-lg:grid-cols-2'>
+                        {
+                            Product.map((item, index) => (
+                                <AppCard
+                                    key={index}
+                                    title={item.title}
+                                    price={item.price}
+                                    discounted={item.discounted}
+                                    image={item.image}
+                                />
+                            ))
+                        }
                     </div>
                 </div>
                 <div className='flex bg-white gap-1 p-5 justify-end pr-[10%]'>
@@ -356,5 +489,5 @@ const index = () => {
         </>
     )
 }
-export default index 
+export default index
 

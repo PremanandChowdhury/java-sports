@@ -16,11 +16,7 @@ const RoutesContainer = () => {
   const CategoryKitsPage = lazy(()=> import('@/pages/Category/Kits'))
   const CategoryShoessPage = lazy(()=> import('@/pages/Category/Shoes'))
 
-
-
-
-
-
+  
   return (
     <Suspense fallback={ <>Loading...</> }>
       <Router>
