@@ -80,7 +80,7 @@ export default function MultiFilters() {
                                     <ul class="w-48 text-sm font-medium text-gray-900 bg-white">
                                         <li class="w-full">
                                             <div class="flex items-center ps-3">
-                                                <input onClick={() => handleFilterButtonClick(event.target.value)} type="checkbox" name="" value="red" id="size3" />
+                                                <input onClick={() => handleFilterButtonClick(event.target.value)} type="checkbox" name="" value="size3" id="size3" />
                                                 <label htmlFor="size3" className={`${labelWrapper}`} id="Bags">Size3</label>
                                             </div>
                                         </li>
@@ -109,7 +109,7 @@ export default function MultiFilters() {
                                     <ul class="w-48 text-sm font-medium text-gray-900 bg-white">
                                         <li class="w-full">
                                             <div class="flex items-center ps-3">
-                                                <input onClick={() => handleFilterButtonClick(event.target.value)} type="checkbox" name="" value="red" id="" />
+                                                <input onClick={() => handleFilterButtonClick(event.target.value)} type="checkbox" name="" value="size5" id="" />
                                                 <label htmlFor="Bags" className={`${labelWrapper}`} id="Bags">light</label>
                                             </div>
                                         </li>

@@ -2,7 +2,7 @@ const ACCORDION_LINKS = [
   {
     label: "Apparel",
     dropdowns: [
-      { label: "All", link: "/ApprealCategory" },
+      { label: "All", link: "/category/apparel" },
       { label: "Jerseys", link: "/" },
       { label: "Pants", link: "/" },
       { label: "Caps", link: "/" },
@@ -22,7 +22,7 @@ const ACCORDION_LINKS = [
   {
     label: "Bats",
     dropdowns: [
-      { label: "All", link: "/category" },
+      { label: "All", link: "/category/bats" },
       { label: "English Willow", link: "/" },
       { label: "Kashmir Willow", link: "/" },
       { label: "Tennis Bat", link: "/" },

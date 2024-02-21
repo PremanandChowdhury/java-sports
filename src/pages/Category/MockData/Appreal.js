@@ -6,7 +6,7 @@ import img2 from '@assets/images/trouser.svg'
 
 export const items = [
     {
-        title: 'ProStrike Elite Cricket Bat',
+        title: 'ProStrike Elite ',
         price: '400',
         discounted: '500',
         color: 'red',

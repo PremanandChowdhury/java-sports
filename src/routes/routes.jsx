@@ -45,10 +45,6 @@ const ROUTES = [
     component: lazy(() => import("@/pages/NotFound")),
   },
   {
-    path: "category",
-    component: lazy(() => import("@/pages/Category/MultiFilters")),
-  },
-  {
     path: "ApprealCategory",
     component: lazy(() => import("@/pages/Category/Apperal")),
   },
@@ -67,6 +63,10 @@ const ROUTES = [
   {
     path: "ShoeCategory",
     component: lazy(() => import("@/pages/Category/Shoes")),
+  },
+  {
+    path: "/category/:category",
+    component: lazy(() => import("@/pages/Category")),
   },
 ];
 

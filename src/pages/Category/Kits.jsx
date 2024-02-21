@@ -6,7 +6,7 @@ import tune from '@/assets/icons/tune.svg'
 import sort from '@/assets/icons/sort.svg'
 
 
-export default function Appreal() {
+export default function Kits() {
     const [MenuToggle, setMenuToggle] = useState(false)
     const labelWrapper = `w-full py-2 ms-1 text-xs font-Lato font-700`
     const [selectedFilters, setSelectedFilters] = useState([]);
