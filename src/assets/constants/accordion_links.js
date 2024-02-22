@@ -31,7 +31,7 @@ const ACCORDION_LINKS = [
   {
     label: "Balls",
     dropdowns: [
-      { label: "All", link: "/BallCategory" },
+      { label: "All", link: "/category/balls" },
       { label: "Red Leather", link: "/" },
       { label: "White Leather", link: "/" },
       { label: "Tennis Ball", link: "/" },
@@ -49,7 +49,7 @@ const ACCORDION_LINKS = [
   {
     label: "Shoes",
     dropdowns: [
-      { label: "All", link: "/ShoeCategory" },
+      { label: "All", link: "/category/shoes" },
       { label: "Spikes", link: "/" },
       { label: "Rubber Studs", link: "/" },
       { label: "Running Shoes", link: "/" },
@@ -67,7 +67,7 @@ const ACCORDION_LINKS = [
   {
     label: "Kitbags",
     dropdowns: [
-      { label: "All", link: "/KitCategory" },
+      { label: "All", link: "/category/kits" },
       { label: "Backpacks", link: "/" },
       { label: "Duffel Bags", link: "/" },
       { label: "Wheelie Bags", link: "/" },
@@ -86,7 +86,7 @@ const ACCORDION_LINKS = [
   {
     label: "Accessories",
     dropdowns: [
-      { label: "All", link: "/AccessoriesCategory" },
+      { label: "All", link: "/category/accessories" },
       { label: "Grips", link: "/" },
       { label: "Cricket Balls", link: "/" },
       { label: "Bat Covers", link: "/" },
