@@ -1,56 +1,81 @@
 // @ts-nocheck
-import { Link, useNavigate } from "react-router-dom"
-import { useDispatch, useSelector } from "react-redux"
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useEffect } from "react";
 import { login } from "@/redux/actions/auth.js";
 import toast from "react-hot-toast";
- 
+import { useForm } from "react-hook-form";
 
 const Login = () => {
-  const { isAuthenticated, message } = useSelector(state => state.login);
+  const { isAuthenticated, message } = useSelector((state) => state.login);
   const dispatch = useDispatch();
-  const [email, setEmail] = useState('');
-  const { loading, error } = useSelector(state => state.login)
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate()
+  const { loading, error } = useSelector((state) => state.login);
+  const navigate = useNavigate();
 
-  const submitHandler = e => {
-    e.preventDefault();
-    dispatch(login(email, password));
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  const onSubmit = (data) => {
+    dispatch(login(data.email, data.password));
   };
 
-  useEffect(()=>{
-    if(isAuthenticated){
-    navigate("/account")
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/account");
     }
-  },[isAuthenticated])
+  }, [isAuthenticated]);
 
   useEffect(() => {
     if (error) {
       toast.error(error);
-      dispatch({ type: 'clearErrors' });
+      dispatch({ type: "clearErrors" });
     }
+  }, [dispatch, error]);
 
-
-  }, [dispatch,error]);
   return (
-    <form onSubmit={submitHandler} className="flex flex-col gap-4 p-14 bg-grey/1 max-sm:mx-5 max-sm:p-8 ">
+    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 p-14 bg-grey/1 max-sm:mx-5 max-sm:p-8">
       <h1 className="text-4xl font-700">Login</h1>
       <div className="flex flex-col gap-2">
-        <label htmlFor="user" className="text-sm font-700 font-Lato ">Email</label>
-        <input className="p-2 border-none rounded-xl" value={email}
-          onChange={e => setEmail(e.target.value)} type="text" placeholder="Enter your email" id="user" />
+        <label htmlFor="user" className="text-sm font-700 font-Lato">
+          Email
+        </label>
+        <input
+          className="p-2 border-none rounded-xl"
+          {...register("email", { required: true })}
+          type="text"
+          placeholder="Enter your email"
+          id="user"
+        />
+        {errors.email && <span className="text-red-500">Email is required</span>}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="password" className="text-sm font-700 font-Lato ">Password</label>
-        <input className="p-2 border-none rounded-xl" type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Enter Password" id="password" />
-        <Link to="/forgot-password" className="text-xs text-right text-red-500 underline">Forget your Password ?</Link>
+        <label htmlFor="password" className="text-sm font-700 font-Lato">
+          Password
+        </label>
+        <input
+          className="p-2 border-none rounded-xl"
+          type="password"
+          {...register("password", { required: true })}
+          placeholder="Enter Password"
+          id="password"
+        />
+        {errors.password && <span className="text-red-500">Password is required</span>}
+        <Link to="/forgot-password" className="text-xs text-right text-red-500 underline">
+          Forget your Password ?
+        </Link>
       </div>
-      <button className="p-3 text-white bg-black font-700 rounded-3xl font-Lato " isLoading={loading} > Login</button>
-      <span className="text-sm text-center ">Don't Have an account ?<Link to="/signup" className="text-red-500 underline">{" "}Create an Account</Link></span>
+      <button className="p-3 text-white bg-black font-700 rounded-3xl font-Lato" isLoading={loading}>
+        Login
+      </button>
+      <span className="text-sm text-center">
+        Don't Have an account ?
+        <Link to="/signup" className="text-red-500 underline">
+          {" "}
+          Create an Account
+        </Link>
+      </span>
     </form>
-  )
-}
-export default Login
+  );
+};
 
+export default Login;
