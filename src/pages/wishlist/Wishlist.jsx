@@ -12,7 +12,7 @@ const wishlist = () => {
                 <div className=''>
                     <div className='bg-white pl-[10%] max-sm:pl-[4%] flex flex-col gap-4 pt-4'>
                         <div className='py-5'>
-                            <span className='font-700 font-Lato text-2xl max-sm:pl-[5%]'>Wishlist- 5 items</span>
+                            <span className='font-700 font-Lato text-2xl max-sm:pl-[5%]'>Wishlist</span>
                         </div>
                         <div className=' bg-white flex max-lg:justify-center pb-10'>
                             <div className="bg-white grid grid-cols-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-4 ">
