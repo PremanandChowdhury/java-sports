@@ -173,7 +173,7 @@ const AppFooter = () => {
         </div>
       </div>
       <div>
-        <hr className='h-0.5px bg-gray-300' />
+        <hr className='h-1 bg-slate-200' />
       </div>
       <div className='items-center flex justify-center'>
         <span>© 2024 Java Sports. All rights reserved.</span>

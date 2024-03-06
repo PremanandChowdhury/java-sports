@@ -40,7 +40,7 @@ const AboutUs = () => {
   return (
     <div className="flex flex-col bg-white px-[150px] max-sm:px-[46px] max-lg:px-[80px] max-xl:px-[100px]">
       <div className="py-10">
-        <img src={aboutImage} alt="About Java Sport" />
+        <img src={aboutImage} className='w-[1600px] ' alt="About Java Sport" />
       </div>
       {aboutSections.map((section, index) => (
         <div className="flex flex-col gap-4" key={index}>
