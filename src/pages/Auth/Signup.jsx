@@ -8,7 +8,7 @@ import eyeClosedIcon from "@/assets/icons/eye-closed.svg";
 import toast from "react-hot-toast";
 
 const AppFormErrorLine = ({ message }) => {
-  return <span className="text-primary text-xs md:text-sm w-[200px]">{message}</span>;
+  return <span className="text-primary text-xs md:text-[10px] w-[200px]">{message}</span>;
 };
 
 

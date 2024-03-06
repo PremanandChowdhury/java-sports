@@ -16,6 +16,8 @@ const AppFooter = () => {
   const [VistMenuToggle, setVistMenuToggle] = useState(false)
 
   const addressMapLink = `https://www.google.com/maps/place/90+Feet+Rd,+Patna,+Bihar/@25.589066,85.15713,16z/data=!4m6!3m5!1s0x39ed589d3565c8c7:0xf197d8a4b0688b5d!8m2!3d25.5890664!4d85.15713!16s%2Fg%2F11byl6rs5m?hl=en&entry=ttu`
+  const fbLink = "https://www.facebook.com/p/Java-sports-100075864027997/?paipv=0&eav=AfbItktfMC5SeAtleHM-MDIWNmvS8-XXEcWr18V1D7E07zc-t7grnm6p7A886zvdIwc&_rdr"
+  const instaLink = "https://www.instagram.com/javasports_official/"
 
   return (
     <div className='flex flex-col px-14 py-10 pt-16 gap-2 max-sm:px-5'>
@@ -39,23 +41,23 @@ const AppFooter = () => {
           { MenuToggle && (
             <div className='p-2 m-2'>
               <ul className='font-lato font-500 text-base list-disc'>
-                <li><Link to="/bats/all">Bats</Link></li>
-                <li><Link to="/balls/all">Balls</Link></li>
-                <li><Link to="/wicket-keeping/all">WicketKeeping</Link></li>
-                <li><Link to="/shoes/all">Shoes</Link></li>
-                <li><Link to="/apparel/all">Apparel</Link></li>
-                <li><Link to="/accessories/all">Accessories</Link></li>
+                <li><Link to="/Bat/All">Bats</Link></li>
+                <li><Link to="/Ball">Balls</Link></li>
+                <li><Link to="/Protection/All">Protective Gear</Link></li>
+                <li><Link to="/Shoes/All">Shoes</Link></li>
+                <li><Link to="/Clothing/All">Clothing</Link></li>
+                <li><Link to="/Accessories/All">Accessories</Link></li>
               </ul>
             </div>
           ) }
           <hr className='h-0.3 bg-black lg:hidden' />
           <ul className='font-500 list-disc px-6 text-[14px] max-sm:hidden max-lg:hidden'>
-            <li><Link to="/bats/all">Bats</Link></li>
-            <li><Link to="/balls/all">Balls</Link></li>
-            <li><Link to="/wicket-keeping/all">WicketKeeping</Link></li>
-            <li><Link to="/shoes/all">Shoes</Link></li>
-            <li><Link to="/apparel/all">Apparel</Link></li>
-            <li><Link to="/accessories/all">Accessories</Link></li>
+            <li><Link to="/Bat/All">Bats</Link></li>
+            <li><Link to="/Ball">Balls</Link></li>
+            <li><Link to="/Protection/All">Protective Gear</Link></li>
+            <li><Link to="/Shoes/All">Shoes</Link></li>
+            <li><Link to="/Clothing/All">Clothing</Link></li>
+            <li><Link to="/Accessories/All">Accessories</Link></li>
           </ul>
         </div>
 
@@ -130,20 +132,20 @@ const AppFooter = () => {
             <div className='p-2 m-2'>
               <ul className='font-lato font-500 text-base list-disc flex gap-3'>
                 <img src={ facebook } alt="" />
-                <span><Link to="">@Javasport</Link></span>
+                <span><Link to={fbLink} target='_blank'>@Javasport</Link></span>
                 <img src={ insta } alt="" />
-                <span><Link to="">@Javasport</Link></span>
+                <span><Link to={instaLink} target='_blank'>@Javasport</Link></span>
               </ul>
             </div>)
           }
           <hr className='h-0.3 bg-black lg:hidden' />
           <div className='font-Lato font-500 flex flex-row gap-2 justify-center max-sm:hidden  max-lg:hidden'>
             <img src={ facebook } alt="facebook" />
-            <span><Link to="">@Javasport</Link></span>
+            <span><Link to={fbLink}>@Javasport</Link></span>
           </div>
           <div className='font-Lato font-500 flex flex-row gap-2 justify-center max-sm:hidden  max-lg:hidden'>
             <img src={ insta } alt="insta" />
-            <span><Link to="">@Javasport</Link></span>
+            <span><Link to={instaLink}>@Javasport</Link></span>
           </div>
         </div>
 
