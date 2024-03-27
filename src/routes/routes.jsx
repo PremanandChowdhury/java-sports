@@ -71,7 +71,7 @@ const ROUTES = [
   },
   {
     path: "/contact",
-    component: lazy(() => import("@/pages/ContactUs/contactus")),
+    component: lazy(() => import("@/pages/Contact")),
   },
   {
     path: "/checkout",
