@@ -179,7 +179,7 @@ export const getHelmets = () => {
 export const getAccessories = () => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`${API.getAllProducts}?sub_category=Accessories`, {
+      .get(`${API.getAllProducts}?sub_category=Batting Gear`, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",
@@ -195,6 +195,8 @@ export const getAccessories = () => {
       });
   });
 };
+
+
 
 export const searchAProduct = (query) => {
   return new Promise((resolve, reject) => {
